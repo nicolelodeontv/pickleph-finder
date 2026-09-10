@@ -6,6 +6,7 @@
   <meta name="description" content="Find and filter pickleball courts across Cebu and the Philippines." />
   <title>PicklePH — Pickleball Courts Finder</title>
   <link rel="stylesheet" href="./src/styles.css" />
+  <link rel="stylesheet" href="./src/ui-fixes.css" />
 </head>
 <body>
   <header class="site-header">
@@ -24,7 +25,7 @@
     </section>
     <section class="finder" aria-label="Court filters">
       <div class="search-row">
-        <label class="search-box"><span>⌕</span><input id="search" type="search" placeholder="Search venue, city, or area…" /></label>
+        <label class="search-box"><span>⌕</span><input id="search" type="search" placeholder="Search venue, city, area, barangay, or facility…" /></label>
         <select id="region"><option value="all">All regions</option><option value="cebu">Cebu</option><option value="metro-manila">Metro Manila</option><option value="davao">Davao</option><option value="bacolod">Bacolod</option><option value="iloilo">Iloilo</option></select>
         <select id="sort"><option value="recommended">Recommended</option><option value="price-low">Price: low to high</option><option value="price-high">Price: high to low</option><option value="courts-high">Most courts</option><option value="name">Name A–Z</option></select>
       </div>
@@ -39,10 +40,11 @@
     <section class="results-head"><div><h2>Courts near you</h2><p id="resultMeta">Showing Cebu venues</p></div><span id="verifiedNote" class="status-pill">Community directory</span></section>
     <section id="results" class="grid" aria-live="polite"></section>
     <section class="empty" id="empty" hidden><div class="empty-icon">🥒</div><h3>No courts match those filters</h3><p>Try a wider area or remove one of the filters.</p><button id="emptyReset" class="primary-btn">Clear filters</button></section>
-    <section class="how"><div><p class="eyebrow">BUILT FOR LOCAL PLAYERS</p><h2>Make court hunting easier.</h2><p>Start in Cebu, then add the rest of the Philippines without changing the UI. Venue records live in one data file so rates and amenities are easy to update.</p></div><div class="how-grid"><div><b>01</b><span>Search</span><p>Venue, city, or barangay</p></div><div><b>02</b><span>Filter</span><p>Price, setup, amenities</p></div><div><b>03</b><span>Play</span><p>Open maps or contact venue</p></div></div></section>
+    <section class="how"><div><p class="eyebrow">BUILT FOR LOCAL PLAYERS</p><h2>Make court hunting easier.</h2><p>Start in Cebu, then add the rest of the Philippines without changing the UI. Venue records live in one data file so rates and amenities are easy to update.</p></div><div class="how-grid"><div><b>01</b><span>Search</span><p>Venue, city, or barangay</p></div><div><b>02</b><span>Filter</span><p>Price, setup, amenities</p></div><div><b>03</b><span>Play</span><p>Open maps or contact venue</p></div></section>
   </main>
   <footer class="site-footer"><div class="wrap footer-inner"><span>PicklePH</span><span>Cebu-first pickleball directory · Data should be confirmed with venues before travel.</span></div></footer>
   <div id="detailsModal" class="modal" hidden aria-hidden="true"><div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div id="modalContent"></div></div></div>
   <script type="module" src="./src/app.js"></script>
+  <script type="module" src="./src/auto-courts.js"></script>
 </body>
 </html>
