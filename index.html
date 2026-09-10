@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Find and filter pickleball courts across Cebu and the Philippines." />
+  <title>PicklePH — Pickleball Courts Finder</title>
+  <link rel="stylesheet" href="./src/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#">Pickle<span>PH</span></a>
+      <div class="header-actions">
+        <button id="locateBtn" class="ghost-btn" type="button">📍 Use my location</button>
+        <button id="themeBtn" class="icon-btn" type="button" aria-label="Toggle theme">☼</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">CEBU FIRST · PHILIPPINES READY</p>
+        <h1>Find your next pickleball game.</h1>
+        <p class="hero-copy">Filter courts by area, price, court setup, amenities, and availability—starting with Cebu and expanding nationwide.</p>
+      </div>
+      <div class="stats" id="stats"></div>
+    </section>
+
+    <section class="finder" aria-label="Court filters">
+      <div class="search-row">
+        <label class="search-box"><span>⌕</span><input id="search" type="search" placeholder="Search venue, city, or area…" /></label>
+        <select id="region"><option value="all">All regions</option><option value="cebu">Cebu</option><option value="metro-manila">Metro Manila</option><option value="davao">Davao</option><option value="bacolod">Bacolod</option><option value="iloilo">Iloilo</option></select>
+        <select id="sort"><option value="recommended">Recommended</option><option value="price-low">Price: low to high</option><option value="price-high">Price: high to low</option><option value="courts-high">Most courts</option><option value="name">Name A–Z</option></select>
+      </div>
+
+      <div class="filters">
+        <div class="filter-group"><span class="filter-label">Area</span><div id="areaChips" class="chips"></div></div>
+        <div class="filter-group"><span class="filter-label">Price</span><div class="chips"><button class="chip" data-price="400">≤ ₱400/hr</button><button class="chip" data-price="300">≤ ₱300/hr</button><button class="chip" data-price="200">≤ ₱200/hr</button></div></div>
+        <div class="filter-group"><span class="filter-label">Setup</span><div class="chips"><button class="chip" data-key="indoor">Indoor</button><button class="chip" data-key="outdoor">Outdoor</button><button class="chip" data-key="aircon">Aircon</button><button class="chip" data-key="lights">Night lights</button></div></div>
+        <div class="filter-group"><span class="filter-label">Amenities</span><div class="chips"><button class="chip" data-key="parking">Parking</button><button class="chip" data-key="paddleRental">Paddle rental</button><button class="chip" data-key="openPlay">Open play</button><button class="chip" data-key="cafe">Food / café</button></div></div>
+      </div>
+      <div class="filter-footer"><button id="resetBtn" class="text-btn" type="button">Reset filters</button><span id="filterSummary"></span></div>
+    </section>
+
+    <section class="results-head"><div><h2>Courts near you</h2><p id="resultMeta">Showing Cebu venues</p></div><span id="verifiedNote" class="status-pill">Community directory</span></section>
+    <section id="results" class="grid" aria-live="polite"></section>
+
+    <section class="empty" id="empty" hidden>
+      <div class="empty-icon">🥒</div><h3>No courts match those filters</h3><p>Try a wider area or remove one of the filters.</p><button id="emptyReset" class="primary-btn">Clear filters</button>
+    </section>
+
+    <section class="how"><div><p class="eyebrow">BUILT FOR LOCAL PLAYERS</p><h2>Make court hunting easier.</h2><p>Start in Cebu, then add the rest of the Philippines without changing the UI. Venue records live in one data file so rates and amenities are easy to update.</p></div><div class="how-grid"><div><b>01</b><span>Search</span><p>Venue, city, or barangay</p></div><div><b>02</b><span>Filter</span><p>Price, setup, amenities</p></div><div><b>03</b><span>Play</span><p>Open maps or contact venue</p></div></div></section>
+  </main>
+
+  <footer class="site-footer"><div class="wrap footer-inner"><span>PicklePH</span><span>Cebu-first pickleball directory · Data should be confirmed with venues before travel.</span></div></footer>
+  <script type="module" src="./src/app.js"></script>
+</body>
+</html>
