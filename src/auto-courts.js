@@ -3,7 +3,9 @@ const feedUrls = [
   './data/discovery-1.json',
   './data/discovery-2.json',
   './data/discovery-3.json',
-  './data/discovery-4.json'
+  './data/discovery-4.json',
+  './data/discovery-5.json',
+  './data/discovery-6.json'
 ];
 const results = document.getElementById('results');
 const search = document.getElementById('search');
