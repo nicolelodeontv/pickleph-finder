@@ -16,13 +16,27 @@ A Cebu-first pickleball court directory and filter for the Philippines.
 
 ## Run locally
 
-This is a zero-build static site. Open `index.html` directly, or serve the folder with any static server.
+Install dependencies:
 
 ```bash
-python -m http.server 3000
+npm install
 ```
 
-Then visit `http://localhost:3000`.
+Run the development server:
+
+```bash
+npm run dev
+```
+
+Then visit the URL shown in the terminal (typically `http://localhost:5173`).
+
+To build for production:
+
+```bash
+npm run build
+```
+
+The built files will be in the `dist/` directory.
 
 ## Data note
 Venue details are seeded from publicly available listings and should be rechecked with each venue before publication. Rates, hours, availability, and amenities can change quickly.
