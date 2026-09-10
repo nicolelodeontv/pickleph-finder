@@ -1,3 +1,8 @@
+import { inject } from '@vercel/analytics';
+
+// Initialize Vercel Web Analytics
+inject();
+
 const venues = [
   {name:'Paddle Ground Pickleball Court Cebu', region:'cebu', area:'Cebu City', courts:3, price:350, unit:'court/hr', tags:['indoor','lights','parking'], rating:4.8, hours:'7 AM–12 AM', address:'Sitio Ylaya, Talamban, Cebu City', featured:true},
   {name:'AfterHours Pickleball', region:'cebu', area:'Cebu City', courts:4, price:350, unit:'court/hr', tags:['indoor','lights'], rating:4.9, hours:'7 AM–12 AM', address:'J.King Warehouse Complex, Cebu City', featured:true},
