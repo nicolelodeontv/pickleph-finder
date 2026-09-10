@@ -4,11 +4,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Cebu-first pickleball court finder for the Philippines — map, filters, distance, booking, favorites and court comparison." />
+  <meta name="theme-color" content="#0d1117" />
   <meta property="og:title" content="PicklePH — Pickleball Courts Finder" />
   <meta property="og:description" content="Find, filter, compare and share pickleball courts across Cebu and the Philippines." />
+  <meta property="og:type" content="website" />
+  <link rel="canonical" href="https://pickleph-finder.vercel.app/" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebSite","name":"PicklePH","url":"https://pickleph-finder.vercel.app/","description":"Cebu-first pickleball court finder for the Philippines."}
+  </script>
   <title>PicklePH — Pickleball Courts Finder</title>
   <link rel="stylesheet" href="./src/styles.css" />
   <link rel="stylesheet" href="./src/app-v2.css" />
+  <link rel="stylesheet" href="./src/aitmpl-enhancements.css" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
 </head>
 <body>
@@ -27,5 +34,6 @@
   <div id="detailsModal" class="modal" hidden aria-hidden="true"><div class="modal-panel" role="dialog" aria-modal="true"><div id="modalContent"></div></div></div>
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
   <script type="module" src="./src/app-v3.js"></script>
+  <script src="./src/aitmpl-enhancements.js" defer></script>
 </body>
 </html>
