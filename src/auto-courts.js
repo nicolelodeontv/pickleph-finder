@@ -108,7 +108,7 @@ async function load(){
 }));
 
 new MutationObserver(()=>{
-  if(!busy && results && autoVenues.length) setTimeout(renderAuto,0);
+  if(!busy && results && autoVenues.length && !results.querySelector('.auto-card')) setTimeout(renderAuto,0);
 }).observe(results,{childList:true});
 
 load();
